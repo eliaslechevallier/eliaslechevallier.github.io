@@ -1,0 +1,39 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<a
+  href={project.href}
+  class="group flex gap-5 border-b border-line py-6 first:pt-0 last:border-b-0"
+>
+  <div
+    class="flex h-24 w-24 shrink-0 items-center justify-center rounded-xl2 bg-highlight/70 text-3xl"
+    aria-hidden="true"
+  >
+    <!-- Placeholder project thumbnail — swap for a real screenshot/logo per project -->
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" class="text-ink/70">
+      <path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v10l10 5 10-5V9l-10 5Z" />
+    </svg>
+  </div>
+  <div class="min-w-0">
+    <div class="flex flex-wrap items-center gap-2">
+      <h3 class="text-lg font-semibold text-ink group-hover:text-accent">
+        {project.title}
+      </h3>
+      {
+        project.tag && (
+          <span class="rounded-full bg-badge px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-ink">
+            {project.tag.label}
+          </span>
+        )
+      }
+    </div>
+    <p class="mt-1 text-sm leading-relaxed text-muted">{project.description}</p>
+  </div>
+</a>

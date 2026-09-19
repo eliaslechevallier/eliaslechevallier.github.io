@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { site } from '../data/site';
+import { allProjects } from '../data/projects';
+
+const featured = allProjects.filter((p) => p.featured);
+---
+
+<BaseLayout title="Home">
+  <p class="text-lg">{site.greeting}</p>
+  <h1 class="mt-2 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+    {site.tagline}
+  </h1>
+  <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{site.subtitle}</h2>
+
+  <p class="mt-6 max-w-xl leading-relaxed text-muted">
+    {site.intro}
+  </p>
+
+  <div class="mt-8 flex flex-wrap gap-3">
+    <a
+      href="/contact"
+      class="rounded-full bg-highlight px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-highlight/70"
+    >
+      Let's connect!
+    </a>
+    <a
+      href="/cv"
+      class="rounded-full border border-ink/20 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink/40"
+    >
+      View my CV
+    </a>
+  </div>
+
+  <h2 class="mt-14 text-2xl font-bold text-ink">My last projects &lt;/&gt;</h2>
+  <div class="mt-4">
+    {featured.map((project) => <ProjectCard project={project} />)}
+  </div>
+
+  <a
+    href="/projects"
+    class="mt-6 inline-block text-sm font-semibold text-accent hover:underline"
+  >
+    See all projects →
+  </a>
+</BaseLayout>

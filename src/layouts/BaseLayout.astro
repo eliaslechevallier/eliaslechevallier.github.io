@@ -1,0 +1,31 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Personal website and portfolio.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <title>{title} · QuiPau</title>
+  </head>
+  <body class="min-h-screen bg-paper text-ink font-sans antialiased">
+    <div class="flex min-h-screen flex-col md:flex-row">
+      <Sidebar />
+      <main class="flex-1 border-t border-line md:border-t-0 md:border-l">
+        <div class="mx-auto max-w-3xl px-6 py-10 sm:px-10 sm:py-14">
+          <slot />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site, socials } from '../data/site';
+---
+
+<BaseLayout title="Contact" description="Get in touch with me.">
+  <h1 class="text-3xl font-extrabold text-ink">Get in touch</h1>
+  <p class="mt-4 max-w-xl leading-relaxed text-muted">
+    The fastest way to reach me is by email.
+  </p>
+
+  <a
+    href={`mailto:${site.email}`}
+    class="mt-8 inline-block rounded-full bg-highlight px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-highlight/70"
+  >
+    {site.email}
+  </a>
+
+  <div class="mt-12 grid gap-3 sm:grid-cols-2">
+    {
+      socials.map((s) => (
+        <a
+          href={s.href}
+          target={s.href.startsWith('http') ? '_blank' : undefined}
+          rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+          class="flex items-center justify-between rounded-xl2 border border-line px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+        >
+          {s.label}
+          <span aria-hidden="true">→</span>
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projectGroups } from '../data/projects';
+---
+
+<BaseLayout title="Projects" description="A selection of things I've built.">
+  <h1 class="text-3xl font-extrabold text-ink">Projects</h1>
+  <p class="mt-2 max-w-xl text-muted">
+    A selection of things I've built — personal projects, research, and
+    academic coursework.
+  </p>
+
+  {
+    projectGroups.map((group) => (
+      <section class="mt-12 first:mt-8">
+        <h2 class="text-2xl font-extrabold text-ink">{group.title}</h2>
+        <div class="mt-4">
+          {group.projects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+    ))
+  }
+</BaseLayout>
