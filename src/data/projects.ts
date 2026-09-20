@@ -18,36 +18,67 @@ export type ProjectGroup = {
 
 export const projectGroups: ProjectGroup[] = [
   {
-    title: 'Personal Projects',
+    title: 'Best Projects',
     projects: [
       {
-        title: 'The Influence of Analyst Sentiment on the VIX Index',
+        title: 'Philo Project',
         meta: 'Personal project',
         description:
           'Investigated how the sentiment of financial analysts relates to movements in the VIX volatility index.',
-        href: '/VIX Project.pdf',
+        href: '/Final_Essay_PHIL1034.pdf',
         featured: true,
       },
       {
         title:
-          'Predicting the Virtual Spread: Algorithmic Arbitrage between Day-Ahead and Intraday Power Markets',
+          'UChicago Econometrics Game: Qualifying Paper',
         meta: 'Personal project',
         description:
           'Designed an algorithmic strategy to arbitrage the price spread between day-ahead and intraday electricity markets.',
-        href: '/intraday_ahead_report.pdf',
+        href: '/Econometrics_Games_Preliminary_final.pdf',
         featured: true,
       },
+
+      {
+        title:
+          '(Team Project) McGill International Portfolio Challenge Case Competition: A biodiversity Sovereign Wealth Fund in Finland',
+        meta: 'Personal project',
+        description:
+          'ADD DESCRIPTION',
+        href: 'EK Square Capital copy.pdf',
+        featured: true,
+      },
+
+      {
+        title:
+          '(Team Project) RedPoint Capital Finance Club: Investment Pitch on an Australian Dollar/USD Appreciation',
+        meta: 'Personal project',
+        description:
+          'ADD DESCRIPTION: was in charge of the valuation and the regression analysis',
+        href: 'RPC GM Team 2 (1).pdf',
+        featured: true,
+      },
+
+      {
+        title:
+          '(Team Project) McGill Investment Club: March 2025 Stock Pitch Competition',
+        meta: 'Personal project',
+        description:
+          'ADD DESCRIPTION',
+        href: 'Stock Pitch competition 2025 copy.pdf',
+        featured: true,
+      },
+
     ],
   },
   {
     title: 'Research Projects',
     projects: [
       {
-        title: 'Height of Random Binary Trees',
+        title: 'Disconnection Between CAC 40 Firms and the French Economy?',
         meta: 'Supervised by Masoud Ashagharian',
         description:
           'Studied the expected height of random binary trees under different random construction models.',
-        href: '/The_height_of_random_binary_trees.pdf',
+        href: '/Elias Lechevallier FINE 547 Research Paper  (5).pdf',
         featured: true,
       },
     ],
@@ -57,19 +88,21 @@ export const projectGroups: ProjectGroup[] = [
     projects: [
       {
         title:
-          'The Coverage of Gavin Newsom in Recent Media: A Study of Tone and Topic',
-        meta: 'COMP370 — Introduction to Data Science, final project',
+          'First Econometrics Team Project: The Effects of Foreign Aid on Gender Equality',
+        meta: 'ECON 468 — Introduction to Econometrics Honours, final project',
         description:
           'Analyzed tone and topic trends across recent media coverage of Gavin Newsom using data science and NLP techniques.',
-        href: '/COMP370 - Final Project v2.pdf',
+        href: '/THE EFFECT OF FOREIGN AID ON GENDER EQUALITY IN DEVELOPING NATIONS.pdf',
       },
+      
+      
       {
         title:
-          'Introduction to (Seasonal) Autoregressive Integrated Moving Average Models: Implementation in R',
-        meta: 'MATH324 — Statistics project',
+          'Outlook for the six biggest Asian Economies amid the 2026 Energy Crisis',
+        meta: 'COMP 2501 at the University of Hong Kong — Introduction to Data Science',
         description:
-          'Implemented and evaluated (S)ARIMA models in R to forecast seasonal time series data.',
-        href: '/ARIMA-SARIMA-paper.pdf',
+          'ADD DESCRIPTION + THE VIDEO',
+        href: 'HKU_DataScience/3036675954_Elias Lechevallier_3_Asian Economies Outlook_20 copy.pdf',
       },
     ],
   },

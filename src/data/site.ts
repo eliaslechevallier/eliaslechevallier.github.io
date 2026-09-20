@@ -4,16 +4,16 @@
 // ---------------------------------------------------------------------------
 
 export const site = {
-  name: 'Paul Quidu',
-  role: 'Software Engineer',
-  greeting: 'Hey there 👋',
-  tagline: "I'm Paul Quidu",
+  name: 'Elias Lechevallier',
+  role: 'Economics and Finance Student',
+  greeting: 'Welcome!',
+  tagline: "I'm Elias Lechevallier",
   intro:
-    "Welcome to my personal site. I write about the things I build, " +
+    "Welcome to my website! I write about the things I build, " +
     "share my projects, and I'm always happy to connect — take a look " +
     "around and feel free to reach out.",
-  email: 'paul.quidu@mail.mcgill.ca',
-  avatar: '/profile_picture.jpg', // replace with /avatar.jpg once you add your own photo
+  email: 'elias.lechevallier@mail.mcgill.ca',
+  avatar: '/profile_pic.JPG', // replace with /avatar.jpg once you add your own photo
   resumeUrl: '/Paul_QuiduResume.pdf', // add a cv.pdf into /public if you want a download button
 };
 
@@ -25,6 +25,6 @@ export const nav = [
 ];
 
 export const socials = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/paul-quidu-a33816253/', icon: 'linkedin' },
-  { label: 'Email', href: 'mailto:paulquidu@hotmail.com', icon: 'mail' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/elias-lechevallier/', icon: 'linkedin' },
+  { label: 'Email', href: 'mailto:eliaslechevallier@gmail.com', icon: 'mail' },
 ];
