@@ -20,8 +20,11 @@ export const site = {
 export const nav = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
-  { label: 'CV', href: '/cv' },
+  { label: 'McGill Journal of Economics', href: 'https://www.mjemcgill.com/search?q=Elias+Lechevallier&f_collectionId=64f0c46d9550ef6a09768c20' },
+  { label: 'Hong Kong', href: '/hong-kong' },
+  { label: 'South Africa', href: '/south-africa' },
   { label: 'Contact', href: '/contact' },
+
 ];
 
 export const socials = [
