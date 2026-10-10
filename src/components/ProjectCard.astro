@@ -10,24 +10,38 @@ const { project } = Astro.props;
 
 <a
   href={project.href}
+  target={project.href.endsWith('.pdf') ? '_blank' : undefined}
+  rel={project.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
   class="group flex h-full flex-col overflow-hidden rounded-xl2 border border-line transition hover:-translate-y-1 hover:shadow-lg"
 >
-  <!-- Temporary visual area. Later this will contain the project's image/preview. -->
+  <!-- Project preview -->
   <div
-    class="flex aspect-[16/9] w-full items-center justify-center bg-highlight/70"
-    aria-hidden="true"
+    class="flex aspect-[16/9] w-full items-center justify-center overflow-hidden bg-highlight/70"
   >
-    <svg
-      width="48"
-      height="48"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      class="text-ink/60"
-    >
-      <path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v10l10 5 10-5V9l-10 5Z" />
-    </svg>
+    {
+      project.image ? (
+        <img
+          src={project.image}
+          alt={`Preview of ${project.title}`}
+          class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
+      ) : (
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="text-ink/60"
+          aria-hidden="true"
+        >
+          <path d="M12 2 2 7l10 5 10-5-10-5Zm0 7L2 4v10l10 5 10-5V9l-10 5Z" />
+        </svg>
+      )
+    }
   </div>
 
+  <!-- Project information -->
   <div class="flex flex-1 flex-col p-5">
     {
       project.meta && (

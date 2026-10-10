@@ -35,10 +35,15 @@ const featured = allProjects.filter((p) => p.featured);
   </a>
 </div>
 
-  <h2 class="mt-14 text-2xl font-bold text-ink">My last projects &lt;/&gt;</h2>
-  <div class="mt-4">
-    {featured.map((project) => <ProjectCard project={project} />)}
-  </div>
+  <h2 class="mt-14 text-2xl font-bold text-ink">
+  Featured Projects
+</h2>
+
+<div class="mt-6 grid grid-cols-3 gap-4">
+  {featured.slice(0, 5).map((project) => (
+    <ProjectCard project={project} />
+  ))}
+</div>
 
   <a
     href="/projects"

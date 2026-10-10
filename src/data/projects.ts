@@ -4,6 +4,7 @@ export type Project = {
   href: string;
   // Small label shown under the title — course code, supervisor, project type, etc.
   meta?: string;
+  image?: string;
   // Optional pastel pill, e.g. "NEW" or "FOSS".
   tag?: { label: string };
   // Shown in the "My last projects" preview on the Home page.
@@ -18,16 +19,19 @@ export type ProjectGroup = {
 
 export const projectGroups: ProjectGroup[] = [
   {
-    title: 'Best Projects',
+    title: 'Economics, Econometrics, and Finance Research Projects',
     projects: [
+
       {
-        title: 'Philo Project',
-        meta: 'Personal project',
+        title: 'FINE 547 (Advanced Finance Seminar) McGill Research Paper: Is There a Disconnection Between CAC 40 Firms and the French Economy? A Geographical Analysis',
+        meta: 'Supervised by Prof. Daniel Andrei',
         description:
-          'Investigated how the sentiment of financial analysts relates to movements in the VIX volatility index.',
-        href: '/Final_Essay_PHIL1034.pdf',
+          'In 2025 the S&P 500 kept hitting all-time highs, driven by the AI boom, while the labor market was worryingly soft, raising questions about  a disconnection that may exist between the largest companies and the rest of the economy. This analysis thus sought to examine the question through the lenses of France, whose Index is not driven by AI companies, but rather by companies that generate 80% of their revenues aborad, raising another type of question to which the paper sought to respond by examinign the relationship between firms operating in different regions of the world and to what extent they related to French indicators, using quantitative tools accounting for the globalaized framework.',
+        href: '/Elias Lechevallier FINE 547 Research Paper  (5).pdf',
         featured: true,
+        image: '/images/fine_547.png',
       },
+
       {
         title:
           'UChicago Econometrics Game: Qualifying Paper',
@@ -36,15 +40,27 @@ export const projectGroups: ProjectGroup[] = [
           'Designed an algorithmic strategy to arbitrage the price spread between day-ahead and intraday electricity markets.',
         href: '/Econometrics_Games_Preliminary_final.pdf',
         featured: true,
+        image: '/images/econometrics_games.png',
       },
 
       {
         title:
-          '(Team Project) McGill International Portfolio Challenge Case Competition: A biodiversity Sovereign Wealth Fund in Finland',
-        meta: 'Personal project',
+          'First Econometrics Team Project: The Effects of Foreign Aid on Gender Equality',
+        meta: 'ECON 468 — Introduction to Econometrics Honours, final project',
         description:
-          'ADD DESCRIPTION',
-        href: 'EK Square Capital copy.pdf',
+          'INPUT DESCRIPTION',
+        href: '/THE EFFECT OF FOREIGN AID ON GENDER EQUALITY IN DEVELOPING NATIONS.pdf',
+        image: '/images/econ468.png',
+      },
+    
+      {
+        title:
+          'Outlook for the six biggest Asian Economies amid the 2026 Energy Crisis',
+        meta: 'COMP 2501 at the University of Hong Kong — Introduction to Data Science',
+        description:
+          'ADD DESCRIPTION + THE VIDEO',
+        href: 'HKU_DataScience/3036675954_Elias Lechevallier_3_Asian Economies Outlook_20 copy.pdf',
+        image: '/images/data_science.png',
         featured: true,
       },
 
@@ -56,6 +72,24 @@ export const projectGroups: ProjectGroup[] = [
           'ADD DESCRIPTION: was in charge of the valuation and the regression analysis',
         href: 'RPC GM Team 2 (1).pdf',
         featured: true,
+        image: '/images/rpc.png',
+      }, 
+
+    ],
+  },
+
+  {
+    title: 'Other Case Competitions',
+    projects: [
+      {
+        title:
+          '(Team Project) McGill International Portfolio Challenge Case Competition: A biodiversity Sovereign Wealth Fund in Finland',
+        meta: 'Personal project',
+        description:
+          'ADD DESCRIPTION',
+        href: 'EK Square Capital copy.pdf',
+        featured: true,
+        image: '/images/mipc.png',
       },
 
       {
@@ -66,46 +100,29 @@ export const projectGroups: ProjectGroup[] = [
           'ADD DESCRIPTION',
         href: 'Stock Pitch competition 2025 copy.pdf',
         featured: true,
+        image: '/images/mic.png',
       },
-
     ],
   },
+  
+
   {
-    title: 'Research Projects',
+    title: 'Philosophy',
     projects: [
       {
-        title: 'Disconnection Between CAC 40 Firms and the French Economy?',
-        meta: 'Supervised by Masoud Ashagharian',
+        title: 'Philo Project',
+        meta: 'Personal project',
         description:
-          'Studied the expected height of random binary trees under different random construction models.',
-        href: '/Elias Lechevallier FINE 547 Research Paper  (5).pdf',
+          'Suppose one day, a group of aliens, more intelligent and just as sentient and emotionally rich as us, arrives on planet Earth. Do we possess moral obligations to treat them as equals? What does your answer imply for socioeconomic arrangements on Earth?',
+        href: '/Final_Essay_PHIL1034.pdf',
+        image: '/images/philo.png',
         featured: true,
       },
+      
     ],
   },
-  {
-    title: 'Academic Coursework',
-    projects: [
-      {
-        title:
-          'First Econometrics Team Project: The Effects of Foreign Aid on Gender Equality',
-        meta: 'ECON 468 — Introduction to Econometrics Honours, final project',
-        description:
-          'Analyzed tone and topic trends across recent media coverage of Gavin Newsom using data science and NLP techniques.',
-        href: '/THE EFFECT OF FOREIGN AID ON GENDER EQUALITY IN DEVELOPING NATIONS.pdf',
-      },
-      
-      
-      {
-        title:
-          'Outlook for the six biggest Asian Economies amid the 2026 Energy Crisis',
-        meta: 'COMP 2501 at the University of Hong Kong — Introduction to Data Science',
-        description:
-          'ADD DESCRIPTION + THE VIDEO',
-        href: 'HKU_DataScience/3036675954_Elias Lechevallier_3_Asian Economies Outlook_20 copy.pdf',
-      },
-    ],
-  },
+
+
 ];
 
 // Flat list of every project — used by the Home page to pick out featured ones.
