@@ -1,13 +1,79 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const experiences = [
+  {
+    image: '/landscape_hkg.png',
+    title: "One of the best hikes in Hong Kong: Dragon's Back, with a view on Shek O Beach",
+    description:
+      'Additional Description here? ',
+  },
+  {
+    image: '/robinson.png',
+    title: 'Meeting 2024 Nobel Prize Economist and Why Nations Fail author at a conference for the opening of HKU School of Governance and Policy',
+    description:
+      'It was a great experience to hear Professor Robinson give a lecture on his view of the state of the world, as well as to have the chance to discuss a few minutes with him about his ongoing projects in Colombia!',
+  },
+  {
+    image: '/AI_Governance.png',
+    title: 'Roundtable with Global Leaders from the Policy World to discuss AI Governance',
+    description:
+      'As I helped Dr. Brian Wong in the organization of the Hong Kong Global AI Governance Conference, I had the chance to attend a roundtable in which policymakers deliberated in small committes the necessary policy steps to ensure a properous future regarding AI Governance.',
+  },
+  {
+    image: '/image_AGI.jpg',
+    title: 'Internship at the Asia Global Insitute',
+    description:
+      'Throughout my Exchange, I had the chance to learn more about Asia and the role of China in the Global Economy, which culminated in engaging in meaningul, data-driven work at the HKU think tank that studies issues around trends in globalization and the interactions between East and West.',
+  },
+];
 ---
 
-<BaseLayout title="Hong Kong" description="My experiences in Hong Kong">
-  <h1 class="text-3xl font-extrabold text-ink">
-    Hong Kong
-  </h1>
+<BaseLayout
+  title="Hong Kong"
+  description="Experiences and reflections from Hong Kong."
+>
+  <header class="mb-12">
+    <h1 class="text-4xl font-extrabold tracking-tight text-ink">
+      Hong Kong
+    </h1>
 
-  <p class="mt-4 text-muted">
-    More coming soon.
-  </p>
+    <p class="mt-4 max-w-2xl leading-relaxed text-muted">
+      A collection of experiences, projects, and moments from my time in Hong Kong.
+    </p>
+  </header>
+
+  <div class="space-y-14">
+    {experiences.map((experience, index) => (
+      <section
+        class="grid grid-cols-1 items-center gap-8 border-t border-line pt-10 md:grid-cols-2"
+      >
+        <div class:list={[
+          'overflow-hidden rounded-xl',
+          index % 2 === 1 && 'md:order-2',
+        ]}>
+          <img
+            src={experience.image}
+            alt={experience.title}
+            class="h-72 w-full rounded-xl object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">
+            Hong Kong · {String(index + 1).padStart(2, '0')}
+          </p>
+
+          <h2 class="mt-3 text-2xl font-bold text-ink">
+            {experience.title}
+          </h2>
+
+          <p class="mt-4 leading-relaxed text-muted">
+            {experience.description}
+          </p>
+        </div>
+      </section>
+    ))}
+  </div>
 </BaseLayout>
