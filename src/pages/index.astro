@@ -8,15 +8,39 @@ const featured = allProjects.filter((p) => p.featured);
 ---
 
 <BaseLayout title="Home">
+
+  <!-- Flags and university logo -->
+  <div class="flex justify-end items-center gap-5 mb-8">
+
+    <img
+      src="/france.png"
+      alt="France"
+      class="h-8 w-auto rounded-sm object-contain"
+    />
+
+    <img
+      src="/colombia.png"
+      alt="Colombia"
+      class="h-8 w-auto rounded-sm object-contain"
+    />
+
+    <img
+      src="/mcgill.png"
+      alt="McGill University"
+      class="h-12 w-auto object-contain"
+    />
+
+  </div>
+
   <p class="text-lg">{site.greeting}</p>
+
   <h1 class="mt-2 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
     {site.tagline}
   </h1>
+
   <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{site.subtitle}</h2>
 
-  <p class="mt-6 max-w-xl leading-relaxed text-muted">
-    {site.intro}
-  </p>
+  <p class="mt-6 w-full leading-relaxed text-muted">{site.intro}</p>
 
   <div class="mt-8 flex flex-wrap gap-3">
   <a
